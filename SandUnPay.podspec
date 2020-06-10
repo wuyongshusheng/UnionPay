@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SandUnPay'
-  s.version          = '0.1.8'
+  s.version          = '0.1.7'
   s.summary          = 'SandUnPay SDK'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   杉德封装银联SDK,提供商户接入银联支付能力
                        DESC
 
-  s.homepage         = 'http://192.168.250.101/tiamaes-ios/UnionPay'
+  s.homepage         = 'https://github.com/tianNanYiHao/SandUnPay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'TMiMAC' => '913836119@qq.com' }
-  s.source           = { :git => 'http://192.168.250.101/tiamaes-ios/UnionPay.git', :tag => s.version.to_s }
+  s.author           = { 'tianNanYiHao' => '851085835@qq.com' }
+  s.source           = { :git => '/Users/tiannanyihao/Desktop/SandUnPay', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # 指定依赖的xocde版本
@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD'
  
   # 指定好第三方.a文件
-  s.vendored_libraries = "SandUnPay/**/*.{a}"
+  s.vendored_libraries = 'SandUnPay/Classes/*.{a}'
   # 指定好第三方.h头文件
   s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => 'SandUnPay/Classes/*.{h}' }
   # 系统动态库
@@ -55,4 +55,3 @@ Pod::Spec.new do |s|
   # 系统lib (去掉lib开头))
   s.libraries = 'z','stdc++','c++'
 end
-#pod repo push TMComponSpec SandUnPay.podspec --allow-warnings --use-libraries --verbose
