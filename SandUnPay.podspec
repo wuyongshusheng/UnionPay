@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD'
  
   # 指定好第三方.a文件
-  s.vendored_libraries = 'SandUnPay/Classes/*.{a}'
+  s.vendored_libraries = 'UnionPay/Classes/*.{a}'
   # 指定好第三方.h头文件
   s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => 'SandUnPay/Classes/*.{h}' }
   # 系统动态库
@@ -55,3 +55,4 @@ Pod::Spec.new do |s|
   # 系统lib (去掉lib开头))
   s.libraries = 'z','stdc++','c++'
 end
+#pod repo push TMComponSpec SandUnPay.podspec --allow-warnings --use-libraries --verbose
