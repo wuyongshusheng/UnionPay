@@ -9,7 +9,6 @@
 #import "SandUnPay.h"
 #import "LFBase64Util.h"
 #import "LFSha1WithRsa.h"
-#import "UPPaymentControl.h"
 #import "MBProgressHUD.h"
 #import "LFIPAddressUtil.h"
 
@@ -304,7 +303,7 @@ static SandUnPay *SandUnPaySharedInstance = nil;
                         //获取TN成功
                         if ([strongSelf isSandUnPayCallApp]) {
                             //拿到TN 起调银联SDK (支付接口)
-                            [[UPPaymentControl defaultControl] startPay:tn fromScheme:SchemeStr mode:strongSelf.modeType viewController:strongSelf.presentedVC];
+                            [[UPPaymentControl defaultControl] startPay:@"" fromScheme:SchemeStr mode:strongSelf.modeType viewController:strongSelf.presentedVC];
                         }else{
                             [strongSelf alertShow:@"您尚未安装银联云闪付App" message:@""];
                         }

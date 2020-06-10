@@ -9,7 +9,6 @@
 #import "LFFViewController.h"
 
 #import "SandUnPay.h"
-
 @interface LFFViewController ()
 
 @end
@@ -41,10 +40,11 @@
     info.notifyUrl = @"http://101.231.114.216:1725/sim/getacptn";
     
     //1.加载秘钥
-    [[SandUnPay sharedInstance] loadSandUnPay:nil privateKeyType:nil privateKeyPwd:nil];
+//    [[SandUnPay sharedInstance] loadSandUnPay:nil privateKeyType:nil privateKeyPwd:nil];
     //2.起调SandUnPay SDK
     [[SandUnPay sharedInstance] callSandUnPay:info viewController:self mode:type];
-    
+    [[UPPaymentControl defaultControl] startPay:@"627554400827496348920" fromScheme:@"SandUnPay" mode:0 viewController:self];
+
     
 }
 

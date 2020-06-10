@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "SandUnPayInfo.h"
+#import "UPPaymentControl.h"
 
 /**
  支付结果回调
