@@ -1,0 +1,6 @@
+framework module SandUnPay {
+  umbrella header "SandUnPay.h"
+
+  export *
+  module * { export * }
+}
